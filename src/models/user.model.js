@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
     },
     mobilenumber: {
-      type: String,
+      type: Number,
       unique: true,
       required: true,
       trim: true,
