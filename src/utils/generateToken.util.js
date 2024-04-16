@@ -5,7 +5,7 @@ const GenerateAccessAuthToken = (email, mobilenumber) => {
   const token = jwt.sign(
     { email: email, mobilenumber: mobilenumber },
     process.env.ACCESS_TOKEN_SCERET,
-    { expiresIn: "30m" }
+    { expiresIn: "40s" }
   );
   return token;
 };
@@ -15,7 +15,7 @@ const GenerateRefreshAuthToken = (email, mobilenumber) => {
   const token = jwt.sign(
     { email: email, mobilenumber: mobilenumber },
     process.env.REFRESH_TOKEN_SCERET,
-    { expiresIn: "1h" }
+    { expiresIn: "3m" }
   );
   return token;
 };
